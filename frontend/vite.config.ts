@@ -17,7 +17,7 @@ export default defineConfig({
     }
   },
   build: {
-    outDir: 'dist',
+    outDir: '../backend/src/main/resources/frontend',
     sourcemap: true
   }
 });
