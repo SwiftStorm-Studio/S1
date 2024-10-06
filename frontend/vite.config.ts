@@ -10,6 +10,9 @@ console.log('Assets Path:', assetsPath);
 
 export default defineConfig({
   plugins: [svelte()],
+  server: {
+    port: 8080
+  },
   resolve: {
     alias: {
       '@components': componentsPath,
