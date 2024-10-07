@@ -10,11 +10,5 @@
 		"sourceMap": true,
 		"strict": true,
 		"moduleResolution": "bundler",
-		"paths": {
-			"@components/*": ["src/components/*"],
-			"@lib/*": ["src/lib/*"],
-			"@routes/*": ["src/routes/*"],
-			"@styles/*": ["src/styles/*"]
-		}
 	}
 }
