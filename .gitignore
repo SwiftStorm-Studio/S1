@@ -5,3 +5,5 @@
 **/.gradle
 **/build
 **/.kotlin
+**/.svelte-kit
+**/package-lock.json
