@@ -1,26 +1,22 @@
 import { defineConfig } from 'vite';
-import { svelte } from '@sveltejs/vite-plugin-svelte';
+import { sveltekit } from '@sveltejs/kit/vite';
 import path from 'path';
 
 const componentsPath = path.resolve(__dirname, './src/components');
-const assetsPath = path.resolve(__dirname, './src/assets');
-
-console.log('Components Path:', componentsPath);
-console.log('Assets Path:', assetsPath);
+const stylesPath = path.resolve(__dirname, './src/styles');
 
 export default defineConfig({
-  plugins: [svelte()],
-  server: {
-    port: 8080
-  },
+  plugins: [sveltekit()],
   resolve: {
     alias: {
       '@components': componentsPath,
-      '@assets': assetsPath
+      '@styles': stylesPath
     }
   },
+  server: {
+    port: 8080
+  },
   build: {
-    outDir: '../backend/src/main/resources/frontend',
-    sourcemap: true
+    sourcemap: true,
   }
 });

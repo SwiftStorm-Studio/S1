@@ -1,0 +1,31 @@
+@import 'variables';
+
+nav {
+  background-color: $secondary-color;
+  padding: 15px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .logo {
+    font-size: $font-size-large;
+    color: $primary-color;
+    font-weight: bold;
+  }
+
+  .menu {
+    display: flex;
+    gap: 20px;
+
+    a {
+      color: $text-color;
+      text-decoration: none;
+      padding: 5px 10px;
+      border-radius: 5px;
+
+      &:hover {
+        background-color: lighten($secondary-color, 10%);
+      }
+    }
+  }
+}

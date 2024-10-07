@@ -1,0 +1,11 @@
+@import 'variables';
+
+h1 {
+  font-size: $font-size-large;
+  color: $primary-color;
+}
+
+p {
+  font-size: $font-size-medium;
+  color: lighten($primary-color, 20%);
+}

@@ -1,8 +1,15 @@
-<script lang="ts">
-  export let title: string;
-  import '@assets/styles/Header.svelte.scss';
+<script>
+  export let title = "SwiftStorm Studio";
 </script>
 
-<header>
-  <h2>{title}</h2>
-</header>
+<nav>
+  <div class="logo">{title}</div>
+  <div class="menu">
+    <a href="/">Home</a>
+    <a href="/about">About</a>
+    <a href="/blog">Blog</a>
+    <a href="/contact">Contact</a>
+  </div>
+</nav>
+
+<style lang="scss" src="@styles/header.svelte.scss"></style>
