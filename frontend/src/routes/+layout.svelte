@@ -1,18 +1,9 @@
-<script lang="ts">
-	import '@styles/global.scss';
+<script>
+	import "@styles/global.scss";
+	import Footer from '@components/Footer.svelte';
 </script>
 
 <main>
-	<slot />
+	<slot></slot>
 </main>
-
-<style>
-    main {
-        max-width: 1200px;
-        margin: 0 auto;
-        padding: 1rem;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-</style>
+<Footer />
