@@ -1,5 +1,4 @@
 <script>
-	import logo from '/logo.png';
 	import '@styles/footer.scss'
 </script>
 
@@ -12,7 +11,9 @@
 	</div>
 
 	<div class="footer-logo">
-		<img src={logo} alt="サイトのロゴ" />
+		<a href="/">
+			<img src="/logo.png" alt="logo"/>
+		</a>
 	</div>
 
 	<div class="footer-copyright">
