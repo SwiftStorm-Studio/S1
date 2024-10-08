@@ -7,11 +7,16 @@
 	import { isLoading } from '$lib/stores/loadingStore';
 	import { initLocale } from '$lib/i18n';
 	import { fade } from 'svelte/transition';
-	import { navigating } from '$app/stores';
+	import { navigating, page } from '$app/stores';
 	import { cubicOut } from 'svelte/easing';
 
 	let loadingDuration = 1000;
 	let loadingTimeout: ReturnType<typeof setTimeout>;
+	let disableHeaderAnimation = false;
+
+	page.subscribe(() => {
+		disableHeaderAnimation = $page.url.pathname === "/login";
+	});
 
 	navigating.subscribe((nav) => {
 		if (nav) {
@@ -35,9 +40,14 @@
 	</div>
 {:else}
 	<div class="page-container">
-		<div in:fade={{ duration: 500, delay: 0, easing: cubicOut }}>
+		{#if disableHeaderAnimation}
 			<Header />
-		</div>
+		{:else}
+			<div in:fade={{ duration: 500, delay: 0, easing: cubicOut }}>
+				<Header />
+			</div>
+		{/if}
+
 		<main class="main-content" in:fade={{ duration: 500, delay: 0, easing: cubicOut }}>
 			<slot />
 		</main>
