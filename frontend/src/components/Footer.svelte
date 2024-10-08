@@ -8,6 +8,7 @@
 		<a href="/news">ニュース</a>
 		<a href="/privacy">プライバシーポリシー</a>
 		<a href="/terms">利用規約</a>
+		<a href="https://github.com/SwiftStorm-Studio/">GitHub</a>
 	</div>
 
 	<div class="footer-logo">
@@ -17,6 +18,8 @@
 	</div>
 
 	<div class="footer-copyright">
-		&copy; {new Date().getFullYear()} SwiftStorm Studio. All Rights Reserved.
+		<div class="footer-border"></div>
+		&copy; 2024 SwiftStorm Studio. All Rights Reserved.
 	</div>
+
 </footer>
