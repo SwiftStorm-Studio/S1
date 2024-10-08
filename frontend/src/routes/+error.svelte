@@ -1,20 +1,21 @@
 <script lang="ts">
 	import { page } from '$app/stores';
 	import '@styles/error.scss'
+	import { _ } from 'svelte-i18n';
 	let errorMessage: string;
 
 	switch ($page.status) {
 		case 404:
-			errorMessage = 'お探しのページは見つかりませんでした。';
+			errorMessage = $_('page.error.404');
 			break;
 		case 500:
-			errorMessage = 'サーバーに問題が発生しました。';
+			errorMessage = $_('page.error.500');
 			break;
 		case 403:
-			errorMessage = 'アクセスが禁止されています。';
+			errorMessage = $_('page.error.403');
 			break;
 		default:
-			errorMessage = '不明なエラーが発生しました。';
+			errorMessage = $_('page.error.999');
 	}
 </script>
 

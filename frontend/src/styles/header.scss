@@ -1,3 +1,5 @@
+@import '@styles/_variables.scss';
+
 *,
 *::before,
 *::after {
@@ -24,7 +26,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url('/back-img2.png');
+  background-image: url('/back-img2-light.png');
   background-size: cover;
   background-position: center;
   filter: brightness(50%) blur(3px);
@@ -120,4 +122,57 @@
     padding: 8px;
     font-size: 14px;
   }
+}
+
+.navbar-language select {
+  background: #fff;
+  color: #333;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.navbar-language select:focus {
+  outline: 2px solid #999;
+}
+
+.navbar-language select option {
+  background: #f9f9f9;
+  color: #333;
+}
+
+.loading-screen {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: $backgroundColor;
+}
+
+.rotating-logo {
+  width: 100px;
+  height: 100px;
+  animation: rotate 2s linear infinite;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.loading-text {
+  margin-top: 20px;
+  font-size: 1.5em;
+  color: #333;
+}
+
+.header.hidden {
+  transform: translateY(-100%);
+  transition: transform 0.3s ease-in-out;
 }
