@@ -2,9 +2,7 @@
 
 .footer {
   position: relative;
-  background-image: url('/back-img.png'); /* noinspection CssInvalidUrlReference */
-  background-size: cover;
-  background-position: center;
+  background-color: #000;
   color: $color;
   padding: 20px 40px 10px 40px;
   text-align: center;
@@ -22,8 +20,11 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.7);
-    pointer-events: none;
+    background-image: url('/back-img1-light.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    filter: brightness(50%) blur(3px);
     z-index: 1;
   }
 

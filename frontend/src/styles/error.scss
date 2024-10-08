@@ -1,0 +1,50 @@
+.error-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  color: #fff;
+  text-align: center;
+}
+
+.error-page h1 {
+  font-size: 3em;
+  margin: 0;
+}
+
+.error-page a {
+  color: #61dafb;
+  text-decoration: none;
+  font-size: 1.2em;
+  margin-top: 20px;
+}
+
+.error-page a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .error-page h1 {
+    font-size: 2em;
+  }
+
+  .error-page a {
+    font-size: 1em;
+  }
+}
+
+@media (max-width: 480px) {
+  .error-page {
+    padding: 0 20px;
+  }
+
+  .error-page h1 {
+    font-size: 1.1em;
+  }
+
+  .error-page a {
+    font-size: 0.9em;
+    margin-top: 15px;
+  }
+}

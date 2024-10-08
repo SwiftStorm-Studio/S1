@@ -4,7 +4,6 @@
 
 <footer class="footer">
 	<div class="footer-links">
-		<a href="/">ホーム</a>
 		<a href="/news">ニュース</a>
 		<a href="/privacy">プライバシーポリシー</a>
 		<a href="/terms">利用規約</a>

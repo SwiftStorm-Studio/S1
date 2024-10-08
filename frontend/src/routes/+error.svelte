@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { page } from '$app/stores';
+	import '@styles/error.scss'
 	let errorMessage: string;
 
 	switch ($page.status) {
@@ -17,34 +18,7 @@
 	}
 </script>
 
-<svelte:head>
-	<title>{$page.status} - エラー</title>
-</svelte:head>
-
 <main class="error-page">
 	<h1>{errorMessage}</h1>
 	<a href="/">ホームに戻る</a>
 </main>
-
-<style>
-    .error-page {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        height: 100vh;
-        color: #fff;
-    }
-    .error-page h1 {
-        font-size: 4em;
-        margin: 0;
-    }
-    .error-page a {
-        color: #61dafb;
-        text-decoration: none;
-        font-size: 1.2em;
-    }
-    .error-page a:hover {
-        text-decoration: underline;
-    }
-</style>
