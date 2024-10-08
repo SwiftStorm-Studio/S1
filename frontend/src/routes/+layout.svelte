@@ -10,7 +10,6 @@
 	import { navigating } from '$app/stores';
 	import { cubicOut } from 'svelte/easing';
 
-	let footerEl: HTMLDivElement;
 	let loadingDuration = 1000;
 	let loadingTimeout: ReturnType<typeof setTimeout>;
 
@@ -28,15 +27,11 @@
 	onMount(async () => {
 		await initLocale();
 	});
-
-	function handleTransitionEnd() {
-		footerEl.classList.add('fixed');
-	}
 </script>
 
 {#if $isLoading}
 	<div class="loading-screen">
-		<p>Loading...</p>
+		<img src="/loading.png" alt="Loading..." class="loading-image"/>
 	</div>
 {:else}
 	<div class="page-container">
