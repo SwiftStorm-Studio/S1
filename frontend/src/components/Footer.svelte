@@ -20,5 +20,4 @@
 		<div class="footer-border"></div>
 		&copy; 2024 SwiftStorm Studio. All Rights Reserved.
 	</div>
-
 </footer>

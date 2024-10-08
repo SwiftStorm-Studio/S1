@@ -1,36 +1,36 @@
 @import '@styles/_variables.scss';
 
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
-
 .header {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
+  margin: 0;
   padding: 20px 30px;
   color: #fff;
+  background-color: rgba(0, 0, 0, 0.8);
   transition: transform 0.3s ease-in-out, background-color 0.3s ease;
   z-index: 1000;
   transform: translateY(0);
   overflow: hidden;
-}
 
-.header::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-image: url('/back-img2-light.png');
-  background-size: cover;
-  background-position: center;
-  filter: brightness(50%) blur(3px);
-  z-index: -1;
+  &.hidden {
+    transform: translateY(-100%);
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('/back-img2-light.png');
+    background-size: cover;
+    background-position: center;
+    filter: brightness(50%) blur(3px);
+    z-index: -1;
+  }
 }
 
 .navbar-logo img {
@@ -47,7 +47,7 @@
   list-style: none;
   display: flex;
   gap: 20px;
-  margin: 0;
+  margin-right: 3em;
   padding: 0;
 }
 
@@ -140,39 +140,4 @@
 .navbar-language select option {
   background: #f9f9f9;
   color: #333;
-}
-
-.loading-screen {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
-  background-color: $backgroundColor;
-}
-
-.rotating-logo {
-  width: 100px;
-  height: 100px;
-  animation: rotate 2s linear infinite;
-}
-
-@keyframes rotate {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-.loading-text {
-  margin-top: 20px;
-  font-size: 1.5em;
-  color: #333;
-}
-
-.header.hidden {
-  transform: translateY(-100%);
-  transition: transform 0.3s ease-in-out;
 }

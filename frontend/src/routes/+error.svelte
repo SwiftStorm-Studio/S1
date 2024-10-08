@@ -6,16 +6,16 @@
 
 	switch ($page.status) {
 		case 404:
-			errorMessage = $_('page.error.404');
+			errorMessage = "ページが見つかりません";
 			break;
 		case 500:
-			errorMessage = $_('page.error.500');
+			errorMessage = "サーバーエラーが発生しました";
 			break;
 		case 403:
-			errorMessage = $_('page.error.403');
+			errorMessage = "アクセスが拒否されました";
 			break;
 		default:
-			errorMessage = $_('page.error.999');
+			errorMessage = "不明なエラーが発生しました";
 	}
 </script>
 
