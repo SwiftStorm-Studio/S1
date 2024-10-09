@@ -1,39 +1,19 @@
-<script lang="ts">
+<script>
 	import '@styles/header.scss';
-	import { onMount } from 'svelte';
-	import { _ } from 'svelte-i18n';
-
-	let lastScrollY = 0;
-	let headerVisible = true;
-
-	function handleScroll() {
-		const currentScrollY = window.scrollY;
-		if (currentScrollY > lastScrollY) {
-			headerVisible = false;
-		} else {
-			headerVisible = true;
-		}
-		lastScrollY = currentScrollY;
-	}
-
-	onMount(() => {
-		window.addEventListener('scroll', handleScroll);
-
-		return () => {
-			window.removeEventListener('scroll', handleScroll);
-		};
-	});
+	let isLoggedIn = false;  // ログイン状態の管理
 </script>
 
-<header class="header {headerVisible ? '' : 'scroll-hidden'}">
-	<nav class="navbar">
-		<div class="navbar-logo">
-			<img src="/logo.png" alt="logo" />
-		</div>
-		<ul class="navbar-links">
-			<li><a href="/">{$_('page.nav.home')}</a></li>
-			<li><a href="/services">{$_('page.nav.services')}</a></li>
-			<li><a href="/login">{$_('page.nav.login')}</a></li>
-		</ul>
-	</nav>
+<header class="header">
+	<a href="/" class="logo-link">
+		<img class="logo" src="/logo.png" alt="Logo"/>
+	</a>
+
+	<button class="login-btn" on:click={() => isLoggedIn = !isLoggedIn}>
+		<img class="icon" src="/login.png" alt="User Icon"/>
+		{#if isLoggedIn}
+			<span>Logout</span>
+		{:else}
+			<span>Login</span>
+		{/if}
+	</button>
 </header>

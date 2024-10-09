@@ -6,3 +6,14 @@ body {
   margin: 0;
   padding: 0;
 }
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.content {
+  flex: 1;
+  padding: 20px;
+}
