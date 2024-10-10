@@ -4,7 +4,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin: 20px 150px;
+  margin: 20px 175px;
   padding: 0 10px;
 }
 
@@ -32,8 +32,10 @@
 .login-btn {
   display: flex;
   align-items: center;
-  background: #22b6a9;
-  color: white;
+  font-family: "JetBrains Mono", monospace;
+  font-size: 15px;
+  font-weight: 700;
+  background: #22b6b6;
   border: none;
   padding: 10px 15px;
   cursor: pointer;
@@ -42,7 +44,7 @@
 }
 
 .login-btn:hover {
-  background: #2ceccc;
+  background: #2cece6;
 }
 
 .icon {

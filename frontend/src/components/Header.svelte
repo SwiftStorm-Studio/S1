@@ -1,6 +1,6 @@
 <script>
 	import '@styles/header.scss';
-	let isLoggedIn = false;  // ログイン状態の管理
+	let isLoggedIn = false;
 </script>
 
 <header class="header">
@@ -8,8 +8,17 @@
 		<img class="logo" src="/logo.png" alt="Logo"/>
 	</a>
 
-	<button class="login-btn" on:click={() => isLoggedIn = !isLoggedIn}>
-		<img class="icon" src="/login.png" alt="User Icon"/>
+	<button
+		class="login-btn"
+		on:click={() => {
+      if (isLoggedIn) {
+        isLoggedIn = false;
+      } else {
+        window.location.href = '/login';
+      }
+    }}
+	>
+		<img class="icon" src="/login.png" alt="icon"/>
 		{#if isLoggedIn}
 			<span>Logout</span>
 		{:else}

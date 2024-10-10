@@ -2,7 +2,7 @@
 	import '@styles/global.scss';
 	import Header from '@components/Header.svelte';
 	import Footer from '@components/Footer.svelte';
-	import { fade, slide } from 'svelte/transition';
+	import { fade } from 'svelte/transition';
 </script>
 
 <div class="main-container">
