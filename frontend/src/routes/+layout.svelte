@@ -1,16 +1,22 @@
 <script>
-	import '@styles/global.scss';
-	import Header from '@components/Header.svelte';
-	import Footer from '@components/Footer.svelte';
+	import "@styles/global.scss"
 	import { fade } from 'svelte/transition';
 </script>
 
-<div class="main-container">
-	<Header />
+<style>
+    main {
+        position: relative;
+    }
 
-	<main class="content" transition:fade={{ duration: 400 }}>
+    .fade-container {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+    }
+</style>
+
+<main>
+	<div class="fade-container" transition:fade|local={{ duration: 400 }}>
 		<slot />
-	</main>
-
-	<Footer />
-</div>
+	</div>
+</main>
