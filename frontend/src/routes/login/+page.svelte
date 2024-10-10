@@ -164,12 +164,26 @@
         margin-bottom: 10px;
     }
 
+		.login-button {
+				margin-top: 20px;
+				margin-bottom: 20px;
+		}
+
 		.register-button {
 				margin-top: 50px;
 		}
 
     .login-button:hover, .register-button:hover {
         background-color: #64afcd;
+    }
+
+    .forgot-password {
+        background: none;
+        border: none;
+        color: #1a3c5a;
+        cursor: pointer;
+        text-decoration: underline;
+        font-size: 1rem;
     }
 
     h1, h2, p {
